@@ -21,11 +21,11 @@ export default function SettingsPage() {
           <form className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Dr. Emily Carter" />
+              <Input id="name" defaultValue="Dr. Aditi Rao" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" defaultValue="emily.carter@meditrack.pro" />
+              <Input id="email" type="email" defaultValue="aditi.rao@meditrack.pro" />
             </div>
             <Button>Save Changes</Button>
           </form>

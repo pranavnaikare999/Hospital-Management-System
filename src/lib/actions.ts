@@ -8,7 +8,7 @@ import { z } from 'zod';
 const PatientFormSchema = z.object({
   id: z.string(),
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  dateOfBirth: z.string().min(1, { message: 'Date of birth is required.' }),
+  dateOfBirth: z.string().regex(/^\d{2}-\d{2}-\d{4}$/, { message: 'Date must be in DD-MM-YYYY format.' }),
   gender: z.enum(['Male', 'Female', 'Other']),
   contact: z.string().email({ message: 'Invalid email address.' }),
   address: z.string().min(5, { message: 'Address must be at least 5 characters.' }),

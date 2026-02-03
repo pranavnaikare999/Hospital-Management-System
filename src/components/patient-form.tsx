@@ -78,7 +78,8 @@ export function PatientForm({ patient, action }: PatientFormProps) {
                     <Input
                       id="dateOfBirth"
                       name="dateOfBirth"
-                      type="date"
+                      type="text"
+                      placeholder="DD-MM-YYYY"
                       defaultValue={patient?.dateOfBirth}
                       aria-describedby="dob-error"
                     />
