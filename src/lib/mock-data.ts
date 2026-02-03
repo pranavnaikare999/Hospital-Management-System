@@ -1,0 +1,135 @@
+import type { Patient, Doctor, Appointment, Prescription } from './definitions';
+
+export const patients: Patient[] = [
+  {
+    id: '1',
+    name: 'John Doe',
+    dateOfBirth: '1985-05-20',
+    gender: 'Male',
+    contact: 'john.doe@example.com',
+    address: '123 Main St, Anytown, USA',
+    medicalHistory: 'Hypertension, Allergic to Penicillin',
+    avatarUrl: 'https://picsum.photos/seed/pat1/100/100',
+  },
+  {
+    id: '2',
+    name: 'Jane Smith',
+    dateOfBirth: '1992-08-15',
+    gender: 'Female',
+    contact: 'jane.smith@example.com',
+    address: '456 Oak Ave, Anytown, USA',
+    medicalHistory: 'Asthma',
+    avatarUrl: 'https://picsum.photos/seed/pat2/100/100',
+  },
+  {
+    id: '3',
+    name: 'Michael Johnson',
+    dateOfBirth: '1978-11-30',
+    gender: 'Male',
+    contact: 'michael.j@example.com',
+    address: '789 Pine Ln, Anytown, USA',
+    medicalHistory: 'Diabetes Type 2',
+    avatarUrl: 'https://picsum.photos/seed/pat3/100/100',
+  },
+  {
+    id: '4',
+    name: 'Sarah Wilson',
+    dateOfBirth: '2001-02-10',
+    gender: 'Female',
+    contact: 'sarah.w@example.com',
+    address: '101 Maple Rd, Anytown, USA',
+    medicalHistory: 'None',
+    avatarUrl: 'https://picsum.photos/seed/pat4/100/100',
+  },
+  {
+    id: '5',
+    name: 'David Brown',
+    dateOfBirth: '1965-07-22',
+    gender: 'Male',
+    contact: 'david.b@example.com',
+    address: '212 Birch Ct, Anytown, USA',
+    medicalHistory: 'High Cholesterol',
+    avatarUrl: 'https://picsum.photos/seed/pat5/100/100',
+  },
+];
+
+export const doctors: Doctor[] = [
+  {
+    id: '1',
+    name: 'Dr. Emily Carter',
+    specialty: 'Cardiologist',
+    avatarUrl: 'https://picsum.photos/seed/doc1/100/100',
+  },
+  {
+    id: '2',
+    name: 'Dr. Ben Adams',
+    specialty: 'General Practitioner',
+    avatarUrl: 'https://picsum.photos/seed/doc2/100/100',
+  },
+];
+
+export const appointments: Appointment[] = [
+  {
+    id: '1',
+    patientId: '1',
+    doctorId: '1',
+    date: new Date().toISOString().split('T')[0],
+    time: '10:00',
+    reason: 'Annual Checkup',
+    status: 'Scheduled',
+  },
+  {
+    id: '2',
+    patientId: '2',
+    doctorId: '2',
+    date: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    time: '14:30',
+    reason: 'Follow-up',
+    status: 'Scheduled',
+  },
+  {
+    id: '3',
+    patientId: '3',
+    doctorId: '1',
+    date: new Date().toISOString().split('T')[0],
+    time: '11:00',
+    reason: 'Chest Pain',
+    status: 'Scheduled',
+  },
+];
+
+export const prescriptions: Prescription[] = [
+  {
+    id: '1',
+    patientId: '1',
+    doctorId: '1',
+    medication: 'Lisinopril',
+    dosage: '10mg',
+    frequency: 'Once a day',
+    startDate: '2023-01-10',
+    endDate: null,
+    refills: 6,
+  },
+  {
+    id: '2',
+    patientId: '2',
+    doctorId: '2',
+    medication: 'Albuterol Inhaler',
+    dosage: '2 puffs',
+    frequency: 'As needed for shortness of breath',
+    startDate: '2022-06-01',
+    endDate: null,
+    refills: 12,
+  },
+  {
+    id: '3',
+    patientId: '3',
+    doctorId: '1',
+    medication: 'Metformin',
+    dosage: '500mg',
+    frequency: 'Twice a day with meals',
+    startDate: '2021-03-15',
+    endDate: null,
+    refills: 3,
+  },
+];
