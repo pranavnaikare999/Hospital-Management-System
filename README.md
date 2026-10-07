@@ -1,4 +1,4 @@
-Hospital Management System
+Hospital Management System 
 
 The smart companion for hospitals to manage record and analyse patient.
 
